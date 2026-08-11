@@ -1,0 +1,30 @@
+[project]
+name = "trading-orders-service"
+version = "1.0.0"
+description = "Asynchronous order management API"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi>=0.116,<1",
+  "uvicorn[standard]>=0.35,<1",
+  "sqlalchemy[asyncio]>=2.0.41,<3",
+  "asyncpg>=0.30,<1",
+  "aiosqlite>=0.21,<1",
+  "PyJWT>=2.10,<3",
+  "pydantic-settings>=2.10,<3",
+  "structlog>=25.4,<26",
+]
+
+[project.optional-dependencies]
+test = [
+  "httpx>=0.28,<1",
+  "pytest>=8.4,<9",
+  "pytest-asyncio>=1.0,<2",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
