@@ -1,5 +1,9 @@
 # Trading Orders Service
 
+I developed a secure Python trade-order API using FastAPI. I used Pydantic validation to prevent malformed orders and introduced authentication and clear separation between API and business logic. For production I would use PostgreSQL rather than in-memory storage, Redis for frequently accessed data, secret management rather than hard-coded credentials, TLS, rate limiting and multiple container instances behind a load balancer.
+
+
+
 An asynchronous Python API for securely submitting, retrieving, listing, and cancelling orders. The code separates HTTP handlers, business services, repositories, and database models so exchange/execution logic can evolve independently.
 
 ## Windows quick start
